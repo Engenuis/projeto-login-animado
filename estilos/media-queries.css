@@ -1,0 +1,47 @@
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    div.animated{
+        width: 800px;
+    }
+    
+    div.animated > div.container{
+        display: flex;
+        width: 790px;
+    }
+
+    div.container > div.imagem{
+     width: 50%;
+     height: 100%
+    }
+
+    div.container > div.formulario{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    div.animated{
+        width: 800px;
+    }
+
+    div.animated > div.container{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 790px;
+    }
+ 
+    div.container > div.imagem{
+        align-self: flex-start;
+        width: 50%;
+        height: 100%
+    }
+
+    div.container > div.formulario{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

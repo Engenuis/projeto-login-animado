@@ -1,0 +1,123 @@
+:root{
+    --preto: #292929;
+    --azul-claro: #a6cfd5;
+    --azul-escuro: #4464ad;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@keyframes neon {
+    0% {background-image: conic-gradient(blue 0deg 45deg, red 45deg 90deg, blue 90deg 135deg, red 135deg 180deg, blue 180deg 225deg, red 225deg 270deg, blue 270deg 315deg, red 315deg 260deg);}
+    
+    12.5% {background-image: conic-gradient(red 0deg 45deg, blue 45deg 90deg, red 90deg 135deg, blue 135deg 180deg, red 180deg 225deg, blue 225deg 270deg, red 270deg 315deg, blue 315deg 260deg);}
+    
+    25% {background-image: conic-gradient(blue 0deg 45deg, red 45deg 90deg, blue 90deg 135deg, red 135deg 180deg, blue 180deg 225deg, red 225deg 270deg, blue 270deg 315deg, red 315deg 260deg);}
+    
+    37.5% {background-image: conic-gradient(red 0deg 45deg, blue 45deg 90deg, red 90deg 135deg, blue 135deg 180deg, red 180deg 225deg, blue 225deg 270deg, red 270deg 315deg, blue 315deg 260deg);}
+    
+    50% {background-image: conic-gradient(blue 0deg 45deg, red 45deg 90deg, blue 90deg 135deg, red 135deg 180deg, blue 180deg 225deg, red 225deg 270deg, blue 270deg 315deg, red 315deg 260deg);}
+
+    62.5% {background-image: conic-gradient(red 0deg 45deg, blue 45deg 90deg, red 90deg 135deg, blue 135deg 180deg, red 180deg 225deg, blue 225deg 270deg, red 270deg 315deg, blue 315deg 260deg);}
+
+    75% {background-image: conic-gradient(blue 0deg 45deg, red 45deg 90deg, blue 90deg 135deg, red 135deg 180deg, blue 180deg 225deg, red 225deg 270deg, blue 270deg 315deg, red 315deg 260deg);}
+
+    87.5% {background-image: conic-gradient(red 0deg 45deg, blue 45deg 90deg, red 90deg 135deg, blue 135deg 180deg, red 180deg 225deg, blue 225deg 270deg, red 270deg 315deg, blue 315deg 260deg);}
+
+    100% {background-image: conic-gradient(blue 0deg 45deg, red 45deg 90deg, blue 90deg 135deg, red 135deg 180deg, blue 180deg 225deg, red 225deg 270deg, blue 270deg 315deg, red 315deg 260deg);}
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--preto);
+}
+
+div.animated{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    height: 500px;
+    animation: neon 5s linear 0s infinite normal;
+}
+
+div.container{
+    background-color: var(--preto);
+    min-width: 390px;
+    height: 490px;
+    z-index: 1;
+}
+
+div.container > div.imagem{
+    width: 100%;
+    height: 50%;
+    background: black url(../imagens/neon.jpg) no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+div.formulario > h1{
+    padding: 10px;
+    text-align: center;
+    color: var(--azul-claro);
+}
+
+div.formulario > form > label{
+    display: none;
+}
+
+div.formulario > form > input{
+    width: calc(100% - 40px);
+    color: red;
+    background: white;
+    transform: translateY(-5px);
+    margin-bottom: 10px;
+}
+
+div.formulario > form > input:focus-within{
+    background-color: var(--azul-claro);
+}
+
+div.formulario > form > span{
+    color: white;
+    padding: 5px;
+}
+
+div.formulario > form > div.buttom{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+div.formulario > form > div.buttom > input.buttom{
+    margin: 0px 15px;
+    width: 100px;
+    cursor: pointer;
+}
+
+div.buttom > input.buttom:hover{
+    background-color: var(--azul-escuro);
+}
+
+div.buttom > input.buttom:active{
+    background-color: red;
+}
+
+div.formulario > form > a{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--azul-claro);
+}
